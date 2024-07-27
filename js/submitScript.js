@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("myForm");
     form.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); 
 
         const email = document.getElementById("email-input").value;
         const ime = document.getElementById("ime-input").value;
@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 prezime: prezime
               };
       
-              // Convert JSON object to string
                 const formDataJson = JSON.stringify(formData);
 
-            // Send POST request to Azure Function
             const response = await fetch('https://notion-googledrive-integrator.azurewebsites.net/api/AddUser?code=BcuwbamhO6D-IsRs5Wpo5vayjghucjZ6eWL8Ny13F37wAzFuJDqTuA%3D%3D', {
                 method: 'POST',
                 body: formDataJson,
                 headers: {
-                    'Content-Type': 'application/json' 
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'POST',
+                    'Access-Control-Allow-Headers': 'Content-Type'
                 }
             });
 
@@ -39,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(`Greska ${responseData.Value}`);
             }
         } catch (error) {
-            // Handle network or other errors
             alert(`Greska: ${error.message}`);
         }
     });
