@@ -61,12 +61,14 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 			<header id="fh5co-header" role="banner">
 				<div class="container">	
 					
-					<a href="index.html" id="fh5co-header-logo"><img src="images/logo.png" alt="Sprint Logo"></a>
+					<a href="index.html" id="fh5co-header-logo"><img src="images/logo.png" alt="Sprint Logo" style="width: 150px; height: auto;"></a>
 					<a href="single-portfolio-new.html" class="fh5co-header-bars js-nav-toggle"><span>Contacts</span></a>					
-					<a href="left-sidebar-new.html" class="fh5co-header-bars js-nav-toggle"><span>Prijava</span></a>				
-					
-					
+					<a href="left-sidebar-new.html" class="fh5co-header-bars js-nav-toggle"><span>Prijava</span></a>					
+					<a href="index.html" class="fh5co-header-bars js-nav-toggle"><span>Home</span></a>					
+
 					<h1 class="fh5co-header-intro">Bjj camp Bihac</h1>
+
+					<div class="small-field">Photo by: Armin Amidžić</div> 
 				</div>
 			</header>	
 			<!-- /fh5co-header -->
@@ -84,21 +86,24 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 									</div>
 							</div>
 							<div class="col-md-4 col-md-offset-4">
-								<form role="form">
+								<form role="form" id="myForm">
 								  <div class="form-group">
-								    <input type="email" class="form-control" id="subscribe-email" placeholder="Email" required>
+								    <input type="email" class="form-control" id="email-input" placeholder="Email" required>
 								  </div>
 
 								  <div class="form-group">
-								    <input type="text" class="form-control" id="subscribe-email" placeholder="Ime" required>
+								    <input type="text" class="form-control" id="ime-input" placeholder="Ime" required>
 								    
 								  </div>
 
 								  <div class="form-group">
-								    <input type="text" class="form-control" id="subscribe-email" placeholder="Prezime" required>
+								    <input type="text" class="form-control" id="prezime-input" placeholder="Prezime" required>
+								  </div>
+								  <div class="button-container">
+									<button  type="submit" class="stretched-button">Prijava</button>
+
 								  </div>
 
-								  <button  class="btn-subscribe">Prijava</button>
 								</form>
 							</div>
 						</div>
@@ -136,5 +141,6 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="js/submitScript.js"></script>
 	</body>
 </html>
