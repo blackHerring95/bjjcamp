@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById("prezime-input").value= '';
                 alert("Uspjesno ste prijaljveni.");
             } else {
-                responseMessage.textContent = `Greska: ${responseData.Value || 'An error occurred'}`;
                 alert(`Greska ${responseData.Value}`);
             }
         } catch (error) {
